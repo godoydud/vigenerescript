@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Cifra de Vigenére</title>
-    <meta charset="utf-8"> 
-    
-  </head>
-  <body>
-      <form id="for">
-  <div class="form-group">
-    <label for="chave">Insira a Chave</label>
-    <input type="text" class="form-control" id="chave" aria-describedby="emailHelp" placeholder="Chave">
+
+<head>
+  <title>Cifra de Vigenére</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="text-center">
+    <img class="imagem" src="vigenere.jpg" alt="">
   </div>
-  <div class="form-group">
-    <label for="cont">Entre com o Texto</label>
-    <input type="text" class="form-control" id="palavra" placeholder="Texto">
-  </div>
-  <div class="form-check">
-  </div>
-    <div id="bot">
-        <button type="button" class="btn btn-dark" id="botaoUm" onClick="Cri()">Criptografar</button>
-        <button type="button" class="btn btn-dark" id="botaoDois" onClick="Descri()">Descriptrografar</button>
+  <div class="jumbotron">
+  <form id="for">
+    <div class="text-center form-group">
+      <label for="chave"><strong>Insira sua chave: </strong></label>
+      <input type="text" class="form-control" id="chave" placeholder="Chave">
     </div>
-        </form>
-      <div class="result">
-        <h1 id="ca">Resultado: </h1>
-        <h1 id="vai"></h1>
-        <h1 id="volta"></h1>
-        </div>
-          <!--
-      <section>
-        <form id="produto">
-            <label for="chave">
-                Insira a chave da criptografia:
-            </label>
-            <input for="chave" type="number" id="chave">
-            <br>
-            <label for="cont">
-                CONTEUDO
-            </label>
-            <input for="cont" id="cont" type="text">
-            <br>
-            <button type="submit" onClick="cripValores()">Criptografar</button>
-            <br>
-            <button type="submit" onclick="descri()">Descriptrografar</button>
-          </form>      
-      </section>
-      -->
-  </body>
-    <script src="index.js"></script>
+    <div class="text-center form-group">
+      <label for="cont"><strong>Insira o texto a ser criptografado</strong></label>
+      <input type="text" class="form-control" id="palavra" placeholder="Texto">
+    </div>
+    <div class="form-check">
+    </div>
+    <div class="text-center" id="bot">
+      <button type="button" class="btn btn-dark" id="botaoUm" onClick="Cript()">Criptografar</button>
+      <button type="button" class="btn btn-dark" id="botaoDois" onClick="Descript()">Descriptrografar</button>
+    </div>
+  </form>
+  <div class="text-center result">
+    <br></br>
+    <h1 id="ca">Resultado: </h1>
+    <h1 id="vai"></h1>
+    <h1 id="volta"></h1>
+  </div>
+</div>
+</body>
+<script src="index.js"></script>
+
 </html>

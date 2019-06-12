@@ -1,8 +1,8 @@
-function Cri(){
+function Cript(){
     
     var palavra = document.getElementById("palavra").value;
     var chave = document.getElementById("chave").value;
-    var alfabeto = "abcdefghijklmnopqrstuvwxyz";
+    var alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
     var d =  "";
     var j = 0;
     for(var i=0; i<palavra.length;i++){
@@ -30,19 +30,18 @@ function Cri(){
         j++;
     }
     console.log(newKey)
-    document.getElementById("vai").innerHTML=" <h3></h3>:  "+d;
+  //  if(palavra.charAt(i) == "")
+    document.getElementById("vai").innerHTML=" <h3></h3>  "+d;
   }
 
-  function Descri(){
+  function Descript(){
     var palavra = document.getElementById("palavra").value;
     var chave = document.getElementById("chave").value;
-    var alfabeto = "abcdefghijklmnopqrstuvwxyz";
+    var alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
     var d =  "";
     var j = 0;
 
     for(var i=0; i<palavra.length;i++){
-        // var c = alfabeto.indexOf(chave.charAt(i));
-
         if(j >= chave.length){
           j=0;
         }
@@ -68,5 +67,5 @@ function Cri(){
         j++;
     }
 
-    document.getElementById("vai").innerHTML=" <h3></h3>..:  "+d;
+    document.getElementById("vai").innerHTML=" <h3></h3>"+d;
   }
