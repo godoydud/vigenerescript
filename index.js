@@ -1,6 +1,6 @@
 function Cript(){
     
-    var palavra = document.getElementById("palavra").value;
+    var palavra = retirarAcento(document.getElementById("palavra").value.toLowerCase());
     var chave = document.getElementById("chave").value;
     var alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var outrosCaracteres = '1234567890!@#$%¨&*()_+,./|';
@@ -55,7 +55,7 @@ function Cript(){
   }
 
   function Descript(){
-    var palavra = document.getElementById("palavra").value;
+    var palavra = retirarAcento(document.getElementById("palavra").value.toLowerCase());
     var chave = document.getElementById("chave").value;
     var alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var outrosCaracteres = '1234567890!@#$%¨&*()_+,./|';
@@ -105,3 +105,14 @@ function Cript(){
   }
     document.getElementById("vai").innerHTML=" <h3></h3>"+d;
   }
+
+  function retirarAcento(palavra) {
+    palavra = palavra.toLowerCase();
+    palavra = palavra.replace(new RegExp('[ÁÀÂÃ]', 'gi'), 'a');
+    palavra = palavra.replace(new RegExp('[ÉÈÊ]', 'gi'), 'e');
+    palavra = palavra.replace(new RegExp('[ÍÌÎ]', 'gi'), 'i');
+    palavra = palavra.replace(new RegExp('[ÓÒÔÕ]', 'gi'), 'o');
+    palavra = palavra.replace(new RegExp('[ÚÙÛ]', 'gi'), 'u');
+    palavra = palavra.replace(new RegExp('[Ç]', 'gi'), 'c');
+    return palavra;
+}
